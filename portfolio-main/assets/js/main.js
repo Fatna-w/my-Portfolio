@@ -8,9 +8,7 @@
 (function() {
   "use strict";
 
-  /**
-   * Easy selector helper function
-   */
+  
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -45,18 +43,14 @@
     })
   }
 
-  /**
-   * Mobile nav toggle
-   */
+  
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
+  
   on('click', '#navbar .nav-link', function(e) {
     let section = select(this.hash)
     if (section) {
